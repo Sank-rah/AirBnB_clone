@@ -2,93 +2,96 @@ section.filters {
   background-color: white;
   height: 70px;
   width: 100%;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDDDDD;
   border-radius: 4px;
-  display: flex;
+  position: relative;
 }
 section.filters button {
+  position: absolute;
   font-size: 18px;
-  background-color: #ff5a5f;
-  color: #ffffff;
+  background-color: #FF5A5F;
+  color: #FFFFFF;
+  top: 50%;
   height: 48px;
   width: 20%;
+  right: 30px;
   border: 0;
   border-radius: 4px;
-  margin: auto 30px;
+  margin-top: -24px;
 }
 section.filters button:hover {
   opacity: 90%;
 }
-section.filters div.locations,
-section.filters div.amenities {
-  height: 100%;
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+.popover {
+  display: none;
+  background-color: #FAFAFA;
+  width: 100%;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-left: 0;
 }
-section.filters div.locations {
-  border-right: 1px solid #dddddd;
+.popover li {
+  list-style: none;
 }
 
-section.filters div.amenities {
-  margin-right: auto;
+.popover h2{
+  display: inline-block;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 16px;
 }
-div.locations h3,
-div.amenities h3 {
-  font-weight: 600;
-  margin-bottom: 0px;
-  margin-left: 50px;
+
+.popover li{
+  padding: 0 10%;
+  margin: .5rem 0;
 }
-div.locations h4,
-div.amenities h4 {
-  font-weight: 400;
-  font-size: 14px;
-  margin: 4px auto;
-  margin-left: 50px;
-  margin-bottom: 16px;
+
+.popover .pop{
+  padding: 10%;
 }
-ul.popover {
-  list-style: none;
-  border: 1px solid #dddddd;
-  border-radius: 4px;
-  background-color: #fafafa;
-  margin-top: 0px;
-  padding-left: 0px;
-  padding-bottom: 20px;
-  padding-top: 20px;
+
+.popover .popi {
+  padding: 10% auto;
 }
-div.locations ul,
-div.amenities ul {
-  display: none;
+
+.popover li ul {
+  padding-left: 0;
 }
-section.filters div.locations:hover > ul,
-section.filters div.amenities:hover > ul {
-  display: block;
-  z-index: 999;
+.locations:hover .popover {
+  display:block;
 }
-section.filters div.locations,
-section.filters div.amenities {
+.amenities:hover .popover {
+  display:block;
+}
+.locations {
+  position: absolute;
   height: 100%;
   width: 25%;
-  display: flex;
-  flex-direction: column;
+  border-right: 1px solid #DDDDDD;
+}
+
+.filters .amenities {
+  position: absolute;
+  height: 100%;
+  width: 25%;
+  margin-left: 25%;
+}
+
+.locations h3, .amenities h3 {
   box-sizing: border-box;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-left: 25%;
+  color: inherit;
 }
-div.locations ul.popover {
-  padding-bottom: 45px;
-}
-div.locations ul.popover li h2 {
-  font-size: 18px;
-  padding-left: 35px;
-  margin-bottom: 4px;
-  margin-top: 0px;
-}
-div.locations ul.popover li h2.California {
-  margin-top: 30px;
-}
-div.locations ul.popover li p,
-div.amenities ul.popover li p {
-  padding-left: 50px;
-  margin: 6px;
+
+.locations h4, .amenities h4 {
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-left: 25%;
+  font-weight: 400;
+  font-size: 14px;
+  color: inherit;
 }
