@@ -4,7 +4,7 @@ section.filters {
       width: 100%;
       border: 1px solid #DDDDDD;
       border-radius: 4px;
-      display: flex;
+      position: relative;
 }
 section.filters button {
       font-size: 18px;
@@ -13,8 +13,10 @@ section.filters button {
       height: 48px;
       width: 20%;
       border: 0;
+      top: 50%;
+      right: 30px;
       border-radius: 4px;
-      margin: auto 30px;
+      margin-top: -24px;
 }
 section.filters button:hover {
       opacity: 90%;
